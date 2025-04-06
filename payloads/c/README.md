@@ -32,3 +32,6 @@ PayloadInject.c es un programa escrito en C que implementa funcionalidades comun
 ```bash
 gcc -o payload PayloadInject.c -lpthread
 ```
+## Captura de ejemplo
+
+![Demostración](screenshots/demo.png)
