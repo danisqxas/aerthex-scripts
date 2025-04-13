@@ -21,3 +21,15 @@ aerthex-scripts/
 ├── helpers/            # Scripts complementarios
 │   └── User_Activity_V1.1.py
 
+
+---
+
+## 📦 Uso por script
+
+### 🔹 PayloadInject.c (C)
+Herramienta de inyección de DLLs en procesos Windows:
+
+```bash
+x86_64-w64-mingw32-gcc PayloadInject.c -o injector.exe
+injector.exe <PID> C:\\ruta\\a\\la\\dll.dll
+
