@@ -1,24 +1,23 @@
-# PayloadInject.c
+# 🧠 Aerthex Scripts
 
-Este es un script en C diseñado para inyectar una DLL en un proceso de Windows usando diferentes métodos. Actualmente incluye la opción de inyección por `CreateRemoteThread` y `NtCreateThreadEx`.
+> Repositorio de herramientas y scripts de propósito ofensivo y analítico desarrollados por **Aerthex**. Enfocado en ciberseguridad, automatización y pruebas de concepto técnicas.
 
-## Características
+![status](https://img.shields.io/badge/status-maintained-brightgreen)
+![license](https://img.shields.io/badge/license-MIT-blue)
+![platform](https://img.shields.io/badge/platform-Windows%20%7C%20Unix-lightgrey)
+![focus](https://img.shields.io/badge/focus-OffSec%20%7C%20Forensics-critical)
 
-- Permite inyectar DLLs en procesos especificados por PID.
-- Utiliza funciones nativas de Windows (`CreateRemoteThread`, `NtCreateThreadEx`).
-- Código comentado y estructurado para su fácil comprensión y modificación.
-- Modo de uso sencillo desde la línea de comandos.
+---
 
-## Requisitos
-
-- Sistema operativo Windows.
-- Tener instalado GCC (puede compilarse con MinGW).
-- Ejecutar con permisos de administrador (en algunos casos necesarios para ciertos procesos).
-
-## Compilación
-
-Abrí una terminal y ejecutá:
+## 📁 Estructura del repositorio
 
 ```bash
-gcc PayloadInject.c -o injector.exe
+aerthex-scripts/
+├── payloads/           # Inyección de código y exploits
+│   └── PayloadInject.c
+├── scanners/           # Reconocimiento y análisis de red
+│   ├── scan_hosts.py
+│   └── LeakScan-Script.py
+├── helpers/            # Scripts complementarios
+│   └── User_Activity_V1.1.py
 
