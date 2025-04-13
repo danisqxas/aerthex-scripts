@@ -1,6 +1,6 @@
 # 🧠 Aerthex Scripts
 
-Repositorio de herramientas y scripts de propósito ofensivo y analítico desarrollados por **Aerthex**. Enfocado en **ciberseguridad**, **automatización** y **pruebas de concepto técnicas**.
+Repositorio de herramientas ofensivas, analíticas y de automatización desarrolladas por **Aerthex**. Diseñado para **pruebas de concepto técnicas**, **auditorías** y **demostraciones** en el ámbito de la **ciberseguridad ofensiva**.
 
 ---
 
@@ -15,6 +15,17 @@ Repositorio de herramientas y scripts de propósito ofensivo y analítico desarr
 
 ---
 
-## 📁 Estructura del repositorio
+## 📚 Tabla de Contenido
+
+- [📁 Estructura del Repositorio](#-estructura-del-repositorio)
+- [⚙️ Requisitos Generales](#️-requisitos-generales)
+- [🚀 Herramientas Incluidas](#-herramientas-incluidas)
+- [🖼️ Capturas de Ejemplo](#-capturas-de-ejemplo)
+- [📬 Contacto](#-contacto)
+- [📜 Licencia](#-licencia)
+
+---
+
+## 📁 Estructura del Repositorio
 
 
