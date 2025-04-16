@@ -1,25 +1,27 @@
-# 🧠 Aerthex Scripts — Herramientas de Ciberseguridad Ofensiva y Automatización Técnica
+# 🧠 Aerthex Scripts — Herramientas Profesionales para Ciberseguridad Ofensiva y Automatización Técnica
 
-Bienvenido al repositorio oficial de *Aerthex Scripts, un conjunto de herramientas desarrolladas con precisión, ética y enfoque técnico, diseñadas para pruebas ofensivas, automatización de análisis y entornos de auditoría controlados. Este espacio es una extensión viva del aprendizaje, la curiosidad y la práctica constante en el mundo de la **ciberseguridad moderna*.
+Bienvenido a *Aerthex Scripts, una colección curada de herramientas enfocadas en **pruebas de intrusión, análisis forense y automatización técnica. Este repositorio es resultado del estudio continuo, la práctica ética y la pasión por la **seguridad ofensiva aplicada*.
 
-Cada línea de código, cada utilidad aquí presente, nace de la necesidad real de crear soluciones funcionales, livianas y adaptables, tanto para ejercicios en laboratorios como para entornos de simulación ofensiva profesional.
+Cada script ha sido desarrollado con objetivos claros: funcionalidad inmediata, bajo consumo de recursos y facilidad de integración en entornos de auditoría reales o laboratorios de aprendizaje.
 
 ---
 
 ![status](https://img.shields.io/badge/estado-activo-brightgreen)
 ![platform](https://img.shields.io/badge/plataforma-multiplataforma-purple)
-![focus](https://img.shields.io/badge/enfoque-ciberseguridad%20ofensiva-red)
+![focus](https://img.shields.io/badge/enfoque-pentesting%20%7C%20automatización-red)
 ![license](https://img.shields.io/badge/licencia-MIT-blue)
 
 ---
 
-## 🧬 Filosofía del Repositorio
+## 🧬 Filosofía del Proyecto
 
-Este proyecto no es una simple colección de scripts. Es una apuesta por herramientas bien estructuradas, comentadas, entendibles y pensadas para escalar o integrarse fácilmente en otras soluciones. Apunta a:
+*Aerthex Scripts* no es solo un conjunto de utilidades técnicas. Es una declaración de principios:
 
-- *Aprender haciendo*: código claro, técnico y funcional.
-- *Compartir conocimiento*: scripts con propósitos definidos y bien explicados.
-- *Actuar con ética*: cada utilidad debe ser empleada exclusivamente en contextos autorizados.
+- *Aprender haciendo*: scripts funcionales y documentados.
+- *Desarrollar con intención*: código legible, reutilizable y adaptable.
+- *Operar con ética*: uso exclusivo en entornos legales, simulados o con autorización expresa.
+
+Este repositorio está diseñado tanto para analistas junior que se están formando como para profesionales que requieren soluciones simples y efectivas en sus flujos diarios.
 
 ---
 
@@ -27,135 +29,120 @@ Este proyecto no es una simple colección de scripts. Es una apuesta por herrami
 
 
 aerthex-scripts/
-├── scanners/           # Scripts de detección y análisis de red
+├── scanners/              # Detección de hosts y análisis de red
 │   ├── scan_hosts.py
 │   └── LeakScan-Script.py
-├── helpers/            # Scripts auxiliares para análisis local
+├── helpers/               # Recolección forense y análisis local
 │   └── User_Activity_V1.1.py
 
 
-Cada carpeta está pensada como un módulo temático. Los nombres de los archivos reflejan directamente su propósito y están diseñados para poder integrarse en flujos más complejos o ejecutarse como herramientas independientes.
+Cada carpeta responde a una categoría funcional: descubrimiento, análisis pasivo, recolección de evidencia o automatización de tareas.
 
 ---
 
 ## ⚙ Requisitos Técnicos
 
-Para utilizar estas herramientas correctamente, es necesario tener instalado:
+Para ejecutar los scripts, se recomienda:
 
-- Python 3.6 o superior
-- Entorno Linux, macOS o Windows (según el script)
-- Las siguientes dependencias:
+- *Python 3.6+*
+- *Sistema operativo:* Linux, macOS o Windows (según el script)
+- *Dependencias:*
 
 bash
 pip install -r requirements.txt
 
 
-Nota: Algunos scripts pueden requerir permisos elevados para acceder a ciertas rutas o ejecutar operaciones de análisis local.
+> Nota: Algunos scripts pueden requerir permisos elevados (sudo) o privilegios de administrador, especialmente en funciones de auditoría local o escaneo de red.
 
 ---
 
-## 🔍 Descripción de Herramientas Incluidas
+## 🔍 Herramientas Incluidas
 
 ### 1. scan_hosts.py  
-Un escáner de red liviano y rápido. Permite detectar hosts activos dentro de un rango específico, útil para tareas de reconocimiento básico.
+*Escaneo de red liviano.* Detecta hosts activos en un rango de IP.
 
-*Ejemplo de uso:*
 bash
 python3 scan_hosts.py --target 192.168.1.0/24
 
 
-*Lo que hace:*
-- Envía solicitudes para verificar hosts vivos.
-- Muestra direcciones IP activas encontradas.
-
-*Ventajas:*
-- Sin dependencias pesadas.
-- Ideal para entornos controlados y pruebas rápidas.
+*Funciones clave:*
+- Descubrimiento rápido de dispositivos conectados.
+- Mínimo uso de recursos.
+- Ideal para reconocimiento inicial.
 
 ---
 
 ### 2. LeakScan-Script.py  
-Verifica si un correo electrónico ha sido expuesto en filtraciones públicas de datos. Excelente para analizar riesgos personales o institucionales de seguridad de la información.
+*Verificación de filtraciones de datos.* Comprueba si un correo ha sido expuesto en brechas públicas.
 
-*Ejemplo de uso:*
 bash
-python3 LeakScan-Script.py -e ejemplo@dominio.com
+python3 LeakScan-Script.py -e correo@dominio.com
 
 
-*Salida esperada:*
-
-[+] El correo aparece en 3 bases de datos filtradas.
-
-
-*Importante:*  
-- Puede conectarse a APIs públicas opcionales para mejorar los resultados.
-- Pensado para profesionales de ciberseguridad, educadores y auditores.
+*Características:*
+- Compatible con APIs de búsqueda de leaks.
+- Informa número y fuente de exposiciones.
+- Apto para auditorías de higiene digital.
 
 ---
 
 ### 3. User_Activity_V1.1.py  
-Herramienta forense liviana que recolecta evidencia de actividad del usuario en sistemas locales: historial de comandos, archivos abiertos recientemente, y más.
+*Recolección forense.* Extrae historial de comandos, accesos recientes y trazas de actividad del usuario.
 
-*Ejemplo de uso:*
 bash
 python3 User_Activity_V1.1.py
 
 
-*Funciones:*
-- Analiza historial de comandos (según SO).
-- Lista accesos recientes a archivos críticos.
-- Ofrece visión rápida del comportamiento del usuario.
-
-*Ideal para:*
-- Entornos forenses.
-- Simulaciones de intrusión.
-- Prácticas de análisis de actividad post-explotación.
+*Incluye:*
+- Historial de bash o PowerShell.
+- Últimos archivos abiertos.
+- Información útil para análisis post-compromiso.
 
 ---
 
-## 🌐 Compatibilidad
+## 🌐 Compatibilidad por Sistema Operativo
 
 | Script                | Linux | Windows | macOS |
 |----------------------|:-----:|:-------:|:-----:|
 | scan_hosts.py      |   ✅   |    ❌    |  ✅   |
 | LeakScan-Script.py |   ✅   |   ✅     |  ✅   |
-| User_Activity.py   |   ✅   |   ✅     |  ⚠   (limitado)
+| User_Activity.py   |   ✅   |   ✅     |  ⚠ (parcial)
 
-Nota: Todos los scripts están diseñados para ser modificables y adaptables según el entorno y la necesidad.
+> Los scripts son modificables para ampliar su compatibilidad o integrarse en pipelines personalizados.
 
 ---
 
-## ✍ Buenas Prácticas y Advertencia Ética
+## ⚠ Consideraciones Éticas y Legales
 
-Este repositorio *no está diseñado para actividades ilegales o malintencionadas*. Todas las herramientas aquí presentes deben ser utilizadas en:
+El contenido de este repositorio está estrictamente orientado a:
 
-- Laboratorios personales
-- Simulaciones con fines educativos
-- Pruebas autorizadas en entornos de pentesting
+- Formación profesional.
+- Evaluaciones técnicas en entornos controlados.
+- Pruebas de seguridad *autorizadas*.
 
-No nos hacemos responsables por el uso indebido de este contenido.
+*No debe utilizarse en sistemas de terceros sin consentimiento.* El autor no se responsabiliza por usos indebidos o ilegales de estas herramientas.
 
 ---
 
 ## 📜 Licencia
 
-Este proyecto se encuentra bajo la licencia MIT. Sentite libre de modificar, compartir y mejorar el código siempre que respetes los términos de la licencia.  
+Distribuido bajo licencia *MIT*. Podés modificar, distribuir o reutilizar el código con libertad, siempre respetando los términos legales.
+
 [Ver archivo LICENSE](LICENSE)
 
 ---
 
-## 🙌 Autor y Contacto
+## ✍ Autor
 
-Desarrollado por [@danisqxas**](https://github.com/danisqxas), entusiasta de la tecnología, autodidacta y apasionado por la seguridad ofensiva.
+Desarrollado por [@danisqxas**](https://github.com/danisqxas), autodidacta, apasionado por el hacking ético, scripting técnico y la mejora continua de herramientas ofensivas.
 
-Podés seguir el desarrollo de herramientas, tips y contenido técnico en:
-
+*Contacto y redes:*
 - GitHub: [@danisqxas](https://github.com/danisqxas)
-- X / Twitter: [@daniiwnet](https://x.com/daniiwnet?s=21)
+- Twitter/X: [@daniiwnet](https://x.com/daniiwnet?s=21)
 
 ---
 
 <div align="center">
-  <strong>Creado con ética, precisión y mucha pasión por la ciberseguridad.</strong><br>
+  <strong>Hecho con ética, propósito y obsesión por la ciberseguridad ofensiva.</strong><br>
   <em>“Automatizá lo repetitivo. Analizá lo esencial. Dominá el conocimiento.”</em>
 </div>
